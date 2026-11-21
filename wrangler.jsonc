@@ -1,0 +1,15 @@
+// Configuração do alojamento no Cloudflare Workers.
+// O site é estático: o Cloudflare serve os ficheiros gerados em dist/.
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "padroes-e-desvios",
+  "compatibility_date": "2026-11-01",
+  "build": {
+    "command": "npm run build"
+  },
+  "assets": {
+    "directory": "./dist",
+    // Endereços que não existem mostram a página «Esta página não existe» (src/pages/404.astro).
+    "not_found_handling": "404-page"
+  }
+}
