@@ -1,0 +1,234 @@
+---
+import Base from '../layouts/Base.astro';
+import { tr } from '../lib/i18n.js';
+import { fmtDate, isoDate, joinNames, boldMe, italics, esc, norm, plain } from '../lib/format.js';
+import { getOpinion } from '../lib/opiniao.js';
+import site from '../data/site.json';
+import people from '../data/pessoas.json';
+import pubsData from '../data/publicacoes.json';
+import projects from '../data/projetos.json';
+import mediaData from '../data/media.json';
+import fig from '../data/figura.json';
+
+interface Props { lang: 'pt' | 'en'; }
+const { lang } = Astro.props;
+const t = tr(lang);
+const L = (o: any, k: string) => o[`${k}_${lang}`] || o[`${k}_pt`] || '';
+
+// Opinião
+const opinion = await getOpinion();
+const [feature, ...archive] = opinion;
+const opWhen = (o: any) => o.dateText || fmtDate(o.date, lang, t('nd'));
+const opOutlet = (o: any) => o.native ? 'Padrões e Desvios' : o.outlet;
+
+// Publicações (ordem: ano, do mais recente; "no prelo" primeiro)
+const pubs = [...pubsData].sort((a, b) => (b.inPress ? 1 : 0) - (a.inPress ? 1 : 0) || b.year - a.year);
+const pubType = (p: any) => (p.type === 'issue' ? 'art' : p.type);
+const refHtml = (p: any) => {
+  const title = italics(p.title) + (/[?!.]$/.test(plain(p.title)) ? '' : '.');
+  const link = p.doi
+    ? ` <a href="https://doi.org/${esc(p.doi)}">https://doi.org/${esc(p.doi)}</a>`
+    : p.url ? ` <a href="${esc(p.url)}">${esc(p.url)}</a>` : '';
+  const yr = p.inPress ? t('inpress') : p.year;
+  return `${boldMe(p.authors)} (${yr}). ${title} ${italics(p.source)}${link}`;
+};
+
+// Media
+const media = [...mediaData].sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0));
+const MEDIA_PAGE = 12;
+
+// Dados para o script do cliente
+const clientStrings = {
+  lang,
+  figX: t('fig.x'), figRo: t('fig.ro'), ind: t('fig.ind'), dep: t('fig.dep'), pub: t('fig.pub'),
+  more: t('more'), count1: t('count1'), countN: t('countN'), empty: t('empty')
+};
+---
+<Base lang={lang} home={true}>
+  <section class="hero" id="topo">
+    <div class="wrap hero-inner">
+      <h1 class="wordmark">Padrões e Desvios</h1>
+      <div class="hero-grid">
+        <div class="hero-text">
+          <p class="hero-lede">{L(site, 'hero')}</p>
+          <p class="hero-by" set:html={t('hero.by')} />
+        </div>
+        <figure class="fig-pair" id="figPair">
+          <div class="charts">
+            <div class="chart">
+              <p class="chart-t"><b>{t('fig1.n')}</b><span>{t('fig1.t')}</span></p>
+              <svg id="fig1" viewBox="0 0 480 290" role="img" aria-label={t('fig1.alt')}></svg>
+            </div>
+            <div class="chart">
+              <p class="chart-t"><b>{t('fig2.n')}</b><span>{t('fig2.t')}</span></p>
+              <svg id="fig2" viewBox="0 0 480 290" role="img" aria-label={t('fig2.alt')}></svg>
+            </div>
+          </div>
+          <div class="fig-foot">
+            <div class="readout" aria-hidden="true">
+              <p class="readout-h" id="roHead"></p>
+              <table>
+                <thead><tr><th></th><th>{t('fig1.n')}</th><th>{t('fig2.n')}</th></tr></thead>
+                <tbody id="roBody"></tbody>
+              </table>
+            </div>
+            <figcaption>
+              <p class="fig-cap">{t('fig.cap')}</p>
+              <p class="fig-cap" set:html={t('fig.src')} />
+            </figcaption>
+          </div>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="opiniao" aria-labelledby="h-op">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 class="sec" id="h-op">{t('op.h')}</h2>
+        <p class="sec-lede">{t('op.lede')}</p>
+      </div>
+      {t('op.ptnote') && <p class="note-en">{t('op.ptnote')}</p>}
+      {feature && (
+        <article class="op-feature">
+          <p class="meta"><span class="outlet">{opOutlet(feature)}</span><time datetime={isoDate(feature.date) || undefined}>{opWhen(feature)}</time></p>
+          <h3>{feature.href ? <a href={feature.href}>{feature.title}</a> : feature.title}</h3>
+          <p class="op-by" set:html={joinNames(feature.authors, t('and'))} />
+          {feature.summary && <p class="op-sum">{feature.summary}</p>}
+          {feature.href && <p class="op-read"><a href={feature.href}>{feature.native ? t('op.readHere') : t('op.read') + feature.outlet}</a></p>}
+        </article>
+      )}
+      <ol class="op-archive">
+        {archive.map(o => (
+          <li>
+            <p class="meta"><span class="outlet">{opOutlet(o)}</span><time datetime={isoDate(o.date) || undefined}>{opWhen(o)}</time></p>
+            <h3>{o.href ? <a href={o.href}>{o.title}</a> : o.title}</h3>
+            <p class="op-by" set:html={joinNames(o.authors, t('and'))} />
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <section class="block alt" id="media" aria-labelledby="h-media">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 class="sec" id="h-media">{t('media.h')}</h2>
+        <p class="sec-lede">{t('media.lede')}</p>
+      </div>
+      <div class="rows" id="mediaList">
+        {media.map((m, i) => (
+          <article class="row" data-extra={i >= MEDIA_PAGE ? '' : undefined}>
+            <p class="row-when">{fmtDate(m.date, lang, t('nd'))}</p>
+            <div class="row-main">
+              <p class="row-outlet">{m.outlet}</p>
+              <h3>{m.url ? <a href={m.url}>{m.title}</a> : m.title}</h3>
+            </div>
+            <p class="row-tag"><span class="pill">{t('media.k.' + m.kind)}</span></p>
+          </article>
+        ))}
+      </div>
+      <button class="more" type="button" id="mediaMore" hidden></button>
+    </div>
+  </section>
+
+  <section class="block" id="trabalho" aria-labelledby="h-pub">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 class="sec" id="h-pub">{t('pub.h')}</h2>
+        <p class="sec-lede">{t('pub.lede')}</p>
+      </div>
+      <div class="filters" id="pubFilters" hidden>
+        <div class="fgroup">
+          <span class="flabel" id="lbl-type">{t('f.type')}</span>
+          <div class="seg" role="group" aria-labelledby="lbl-type" id="segType">
+            <button type="button" data-v="all" aria-pressed="true">{t('f.all')}</button>
+            <button type="button" data-v="art" aria-pressed="false">{t('f.art')}</button>
+            <button type="button" data-v="book" aria-pressed="false">{t('f.book')}</button>
+            <button type="button" data-v="chap" aria-pressed="false">{t('f.chap')}</button>
+            <button type="button" data-v="proc" aria-pressed="false">{t('f.proc')}</button>
+          </div>
+        </div>
+        <div class="fgroup">
+          <span class="flabel" id="lbl-who">{t('f.who')}</span>
+          <div class="seg" role="group" aria-labelledby="lbl-who" id="segWho">
+            <button type="button" data-v="all" aria-pressed="true">{t('f.any')}</button>
+            <button type="button" data-v="both" aria-pressed="false">{t('f.both')}</button>
+            <button type="button" data-v="tn" aria-pressed="false">Tiago Neves</button>
+            <button type="button" data-v="gn" aria-pressed="false">Gil Nata</button>
+          </div>
+        </div>
+        <div class="fgroup">
+          <label class="flabel" for="q">{t('f.search')}</label>
+          <input class="search" id="q" type="search" autocomplete="off" placeholder={t('f.ph')}>
+        </div>
+      </div>
+      <p class="count" id="count" aria-live="polite"></p>
+      <ol class="refs" id="refs">
+        {pubs.map(p => (
+          <li class="ref" data-type={pubType(p)} data-who={p.who.join(' ')} data-q={norm(`${p.authors} ${p.title} ${p.source}`)}>
+            <span class="ref-year">{p.inPress ? t('inpress') : p.year}</span>
+            <div>
+              <p class="ref-text" set:html={refHtml(p)} />
+              <p class="ref-kind"><span class={'k-' + pubType(p)}>{t('kind.' + p.type)}</span></p>
+            </div>
+          </li>
+        ))}
+      </ol>
+      <p class="empty" id="pubEmpty" hidden>{t('empty')}</p>
+      <button class="more" type="button" id="pubMore" hidden></button>
+    </div>
+  </section>
+
+  <section class="block alt" id="projetos" aria-labelledby="h-proj">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 class="sec" id="h-proj">{t('proj.h')}</h2>
+        <p class="sec-lede">{t('proj.lede')}</p>
+      </div>
+      <div id="projList">
+        {projects.map(p => (
+          <article class="proj">
+            <h3 class="proj-name" set:html={esc(p.name).replace(/_/g, '_<wbr>')} />
+            <div>
+              <p class="proj-title">{L(p, 'title')}</p>
+              <p class="proj-line"><b>{t('proj.fund')}:</b> {L(p, 'funding')}</p>
+              <p class="proj-line"><b>{t('proj.role')}:</b> {L(p, 'role')}</p>
+              {p.url && <p class="proj-line proj-link"><a href={p.url}>{t('proj.site')}</a></p>}
+            </div>
+            <p class="proj-period">{/^em curso$/i.test(p.period.trim()) ? t('proj.ongoing') : p.period}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="quem-somos" aria-labelledby="h-about">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 class="sec" id="h-about">{t('about.h')}</h2>
+      </div>
+      <div class="people">
+        {people.map(p => (
+          <article class="person">
+            <div class="mono" aria-hidden="true">{p.initials}</div>
+            <div>
+              <h3>{p.name}</h3>
+              <p class="aff">{p.affiliation}</p>
+              <p class="bio" set:html={italics(L(p, 'bio'))} />
+              <p class="links">{p.links.map(l => <a href={l.url}>{l.label}</a>)}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+      <p class="together">{L(site, 'together')}</p>
+    </div>
+  </section>
+
+  <script type="application/json" id="figData" set:html={JSON.stringify(fig)} />
+  <script type="application/json" id="uiData" set:html={JSON.stringify(clientStrings)} />
+</Base>
+
+<script>
+  import '../scripts/home.js';
+</script>

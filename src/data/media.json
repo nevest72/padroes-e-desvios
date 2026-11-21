@@ -1,0 +1,317 @@
+[
+  {
+    "date": "2026-11-16",
+    "outlet": "Jornal de Notícias",
+    "kind": "news",
+    "title": "Educação Física com média de 18 nos colégios privados",
+    "url": "https://www.jn.pt/nacional/artigo/educacao-fisica-com-media-de-18-nos-colegios-privados/18148480"
+  },
+  {
+    "date": "2026-10-30",
+    "outlet": "Jornal de Notícias",
+    "kind": "news",
+    "title": "Em 27 colégios mais de metade das notas dadas foram 19 e 20",
+    "url": "https://www.jn.pt/nacional/artigo/em-27-colegios-mais-de-metade-das-notas-dadas-foram-19-e-20/18142466"
+  },
+  {
+    "date": "2025-04-04",
+    "outlet": "Jornal de Notícias",
+    "kind": "news",
+    "title": "Quase 80% dos colégios não atribuíram uma única nota negativa",
+    "url": "https://www.jn.pt/8330424968/quase-80-dos-colegios-nao-atribuiram-uma-unica-negativa/amp/"
+  },
+  {
+    "date": "2025-02-07",
+    "outlet": "Notícias U.Porto",
+    "kind": "news",
+    "title": "Equity&Pisa: resultados do projeto apresentados no Parlamento",
+    "url": "https://noticias.up.pt/fpceup/equitypisa-resultados-do-projeto-apresentados-no-parlamento/"
+  },
+  {
+    "date": "2024-07-12",
+    "outlet": "Diário de Notícias",
+    "kind": "news",
+    "title": "Quase 90% das escolas com média positiva",
+    "url": "https://www.dn.pt/3505018238/quase-90-das-escolas-com-media-positiva/"
+  },
+  {
+    "date": "2024-07-12",
+    "outlet": "Jornal de Notícias",
+    "kind": "news",
+    "title": "Quase 90% das escolas com média positiva nos exames do secundário",
+    "url": "https://www.jn.pt/6367918874/quase-90-das-escolas-com-media-positiva-nos-exames-do-secundario/"
+  },
+  {
+    "date": "2023-06-16",
+    "outlet": "Público",
+    "kind": "news",
+    "title": "Competição acérrima, burguesia forte e professores estáveis. O que explica o sucesso a norte?",
+    "url": "https://www.publico.pt/2023/06/16/sociedade/noticia/competicao-acerrima-burguesia-forte-professores-estaveis-explica-sucesso-norte-2052811"
+  },
+  {
+    "date": "2023-06-16",
+    "outlet": "Renascença",
+    "kind": "int",
+    "title": "Inflação de notas. Exames do 12.º deviam valer mais para evitar “desregulação fortíssima”",
+    "url": "https://rr.sapo.pt/noticia/pais/2023/06/16/inflacao-de-notas-exames-do-12-deviam-valer-mais-para-evitar-desregulacao-fortissima/335142/"
+  },
+  {
+    "date": "2023-06-16",
+    "outlet": "Renascença",
+    "kind": "int",
+    "title": "“Públicas têm melhores resultados do que privadas” se considerado contexto socioeconómico",
+    "url": "https://rr.sapo.pt/noticia/pais/2023/06/16/publicas-tem-melhores-resultados-do-que-privadas-se-considerado-contexto-socioeconomico/335277/"
+  },
+  {
+    "date": "2023-02-08",
+    "outlet": "Jornal de Notícias",
+    "kind": "news",
+    "title": "Diretores a favor da mudança no peso dos exames e disciplinas",
+    "url": "https://www.jn.pt/nacional/diretores-a-favor-da-mudanca-no-peso-dos-exames-e-das-disciplinas-15797645.html"
+  },
+  {
+    "date": "2023-02-02",
+    "outlet": "Público",
+    "kind": "news",
+    "title": "Ministros da Educação e Ensino Superior em desacordo sobre fim dos exames nacionais",
+    "url": "https://www.publico.pt/2023/02/02/sociedade/noticia/ministros-educacao-ensino-superior-desacordo-fim-exames-nacionais-2037259"
+  },
+  {
+    "date": "2023-01-26",
+    "outlet": "Público",
+    "kind": "news",
+    "title": "Quotas para alunos pobres que o Governo estuda introduzir não têm paralelo na Europa",
+    "url": "https://www.publico.pt/2023/01/26/sociedade/noticia/quotas-alunos-pobres-governo-estuda-introduzir-nao-paralelo-europa-2036097"
+  },
+  {
+    "date": "2022-08-16",
+    "outlet": "El Periódico de Catalunya",
+    "kind": "news",
+    "title": "La fórmula de éxito de Portugal para acabar con el fracaso escolar",
+    "url": "https://www.elperiodico.com/es/sociedad/20220816/formula-exito-portugal-acabar-fracaso-13975652"
+  },
+  {
+    "date": "2021-07-23",
+    "outlet": "Público",
+    "kind": "news",
+    "title": "Escolas desfavorecidas falham objectivo de melhorar notas",
+    "url": "https://www.publico.pt/2021/07/23/sociedade/noticia/programa-escolas-desfavorecidas-falha-objectivo-melhorar-notas-alunos-1971427"
+  },
+  {
+    "date": "2021-07-23",
+    "outlet": "Expresso",
+    "kind": "news",
+    "title": "Apoio às escolas em meios desfavorecidos falha objetivos",
+    "url": "https://expresso.pt/sociedade/2021-07-23-Educacao.-Governos-falharam-no-apoio-as-escolas-em-meios-desfavorecidos-663ef549"
+  },
+  {
+    "date": "2021-07-23",
+    "outlet": "Jornal de Notícias",
+    "kind": "news",
+    "title": "Alunos de escolas em zonas carenciadas não estão a melhorar notas",
+    "url": "https://www.jn.pt/nacional/alunos-de-escolas-em-zonas-carenciadas-nao-estao-a-melhorar-notas-13966078.html"
+  },
+  {
+    "date": "2021-07-23",
+    "outlet": "Renascença",
+    "kind": "col",
+    "title": "O debate sobre o estado em que “Eles” estão",
+    "url": "https://rr.sapo.pt/artigo/graca-franco/2021/07/23/o-debate-sobre-o-estado-em-que-eles-estao/247339/"
+  },
+  {
+    "date": "2020-12-18",
+    "outlet": "Público",
+    "kind": "news",
+    "title": "Ministro afasta mudanças no acesso ao ensino superior até ao final da legislatura",
+    "url": "https://www.publico.pt/2020/12/18/sociedade/noticia/ministro-afasta-mudancas-acesso-ensino-superior-ate-final-legislatura-1943410"
+  },
+  {
+    "date": "2020-12-18",
+    "outlet": "Jornal de Notícias",
+    "kind": "news",
+    "title": "Investigadores contra revisão no acesso ao Superior proposta pelo CNE",
+    "url": "https://www.jn.pt/nacional/investigadores-contra-revisao-no-acesso-ao-superior-proposta-pelo-cne-13151677.html"
+  },
+  {
+    "date": "2018-11-19",
+    "outlet": "Público",
+    "kind": "news",
+    "title": "Escolas violam as suas próprias regras para inflacionar notas",
+    "url": "https://www.publico.pt/2018/11/19/sociedade/noticia/escolas-violam-proprias-regras-inflacionar-notas-1851461"
+  },
+  {
+    "date": "2018-02-03",
+    "outlet": "Jornal de Notícias",
+    "kind": "news",
+    "title": "Doze escolas fiscalizadas por inflacionarem notas",
+    "url": ""
+  },
+  {
+    "date": "2016-12-17",
+    "outlet": "Jornal de Notícias",
+    "kind": "news",
+    "title": "Ranking mais dividido na recuperação de alunos",
+    "url": ""
+  },
+  {
+    "date": "2016-12-17",
+    "outlet": "Observador",
+    "kind": "news",
+    "title": "Há cinco anos que 14 escolas secundárias “inflacionam” notas",
+    "url": "https://observador.pt/2016/12/17/ha-cinco-anos-que-14-escolas-secundarias-inflacionam-notas/"
+  },
+  {
+    "date": "2015-12-12",
+    "outlet": "Público",
+    "kind": "news",
+    "title": "Inflação das notas «obriga a repensar todo o sistema de acesso ao superior»",
+    "url": ""
+  },
+  {
+    "date": "2015-01-26",
+    "outlet": "RTP 2",
+    "kind": "tv",
+    "title": "Entrevista em direto no Jornal 2",
+    "url": ""
+  },
+  {
+    "date": "2015-01-26",
+    "outlet": "Diário de Notícias",
+    "kind": "news",
+    "title": "Escolas privadas “totalmente de acordo” com mudanças no acesso ao superior",
+    "url": "https://www.pressreader.com/portugal/diario-de-noticias/20150126/281694023182084?srsltid=AYCX9vJidKSTLradKz4rZHYhSNmt9RQBprMYy8tpGTZ1hLODYOR-iwlK"
+  },
+  {
+    "date": "2015-01-25",
+    "outlet": "Jornal de Notícias",
+    "kind": "news",
+    "title": "Acesso ao Superior: privadas fazem batota com as notas",
+    "url": ""
+  },
+  {
+    "date": "2015-01-25",
+    "outlet": "Correio da Manhã",
+    "kind": "news",
+    "title": "Notas inflacionadas: pais exigem novo modelo no acesso ao Superior",
+    "url": ""
+  },
+  {
+    "date": "2015-01-24",
+    "outlet": "RTP, SIC, TVI e Porto Canal",
+    "kind": "tv",
+    "title": "Peças sobre o estudo da inflação de notas em vários serviços noticiosos (RTP 1, RTP 2, RTP Informação, SIC, SIC Notícias, TVI, TVI 24 e Porto Canal)",
+    "url": ""
+  },
+  {
+    "date": "2015-01-24",
+    "outlet": "Expresso",
+    "kind": "news",
+    "title": "Colégios do Porto são os que mais inflacionam notas",
+    "url": "https://expresso.pt/sociedade/notas-sao-mais-inflacionadas-em-colegios-do-porto=f907847"
+  },
+  {
+    "date": "2015-01-24",
+    "outlet": "Público",
+    "kind": "news",
+    "title": "Escolha da escola pode valer “2 (ou até 4) valores” na nota interna",
+    "url": "https://www.publico.pt/2015/01/24/sociedade/noticia/escolha-da-escola-pode-valer-2-ou-ate-4-valores-na-nota-interna-1683210"
+  },
+  {
+    "date": "2015-01-24",
+    "outlet": "Jornal de Notícias",
+    "kind": "news",
+    "title": "Colégios inflacionam notas e dão 90% de vantagem a alunos",
+    "url": "https://www.jn.pt/sociedade/artigo/colegios-inflacionam-notas-e-dao-90-de-vantagem-a-alunos/4360191"
+  },
+  {
+    "date": "2014-05-10",
+    "outlet": "TVI 24",
+    "kind": "tv",
+    "title": "Debate sobre o estudo da inflação de notas, moderado por Henrique Garcia",
+    "url": ""
+  },
+  {
+    "date": "2014-05-08",
+    "outlet": "Jornal de Leiria",
+    "kind": "news",
+    "title": "Estudo revela que alunos do ensino privado são beneficiados",
+    "url": ""
+  },
+  {
+    "date": "2014-05-03",
+    "outlet": "Expresso",
+    "kind": "news",
+    "title": "Estudo mostra que colégios inflacionam notas",
+    "url": "https://expresso.pt/sociedade/estudo-mostra-que-colegios-inflacionam-notas=f868155"
+  },
+  {
+    "date": "2014-05-03",
+    "outlet": "Público",
+    "kind": "news",
+    "title": "Notas inflacionadas das privadas permitem ultrapassar até 450 colegas",
+    "url": "https://www.publico.pt/2014/05/03/sociedade/noticia/notas-inflacionadas-dos-alunos-das-privadas-permitem-ultrapassar-ate-450-colegas-1634446"
+  },
+  {
+    "date": "2014-05-03",
+    "outlet": "SIC e SIC Notícias",
+    "kind": "tv",
+    "title": "Colégios inflacionam notas",
+    "url": ""
+  },
+  {
+    "date": "2013-11-09",
+    "outlet": "Público",
+    "kind": "news",
+    "title": "Os rankings não nos permitem inferir se as escolas trabalham bem ou mal",
+    "url": "https://www.publico.pt/2013/11/09/sociedade/noticia/os-rankings-nao-nos-permitem-inferir-se-a-escola-trabalha-bem-o-mal-1611565"
+  },
+  {
+    "date": "2012-10-13",
+    "outlet": "Expresso",
+    "kind": "news",
+    "title": "Reféns dos soundbytes?",
+    "url": ""
+  },
+  {
+    "date": "2012-07-23",
+    "outlet": "Público",
+    "kind": "news",
+    "title": "Estudo conclui que alunos do particular têm sido beneficiados",
+    "url": "https://www.publico.pt/sociedade/estudo-conclui-que-alunos-do-particular-tem-sido-beneficiados-1555982"
+  },
+  {
+    "date": "2008-01-31",
+    "outlet": "Jornal de Notícias",
+    "kind": "news",
+    "title": "Serviço inovador arbitra conflitos do quotidiano",
+    "url": ""
+  },
+  {
+    "date": "2007-12-20",
+    "outlet": "Correio da Manhã",
+    "kind": "news",
+    "title": "Centros de reinserção têm falhas",
+    "url": "https://www.cmjornal.pt/portugal/detalhe/centros-de-reinsercao-tem-falhas"
+  },
+  {
+    "date": "2007-12-19",
+    "outlet": "Jornal de Notícias",
+    "kind": "news",
+    "title": "Falhanço na reinserção de jovens delinquentes",
+    "url": ""
+  },
+  {
+    "date": "2007-10-18",
+    "outlet": "Público",
+    "kind": "news",
+    "title": "Primeiro gabinete gratuito de mediação aberto pela comunidade",
+    "url": "https://eapnimprensa.blogspot.com/2007/10/primeiro-gabinete-gratuito-de-mediao.html"
+  },
+  {
+    "date": "2006-08-21",
+    "outlet": "Público",
+    "kind": "news",
+    "title": "Centros educativos pouco orientados para a reinserção dos menores delinquentes",
+    "url": "https://www.publico.pt/2006/08/21/jornal/centros-educativos-pouco-orientados-para-a-reinsercao-dos-menores-delinquentes-94371"
+  }
+]

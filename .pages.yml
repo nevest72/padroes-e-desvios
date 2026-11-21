@@ -1,0 +1,244 @@
+# Configuração do editor no browser (Pages CMS, https://app.pagescms.org).
+# Cada entrada abaixo aparece como um separador no editor.
+
+media:
+  input: public/imagens
+  output: /imagens
+
+content:
+  - name: opiniao
+    label: Opinião
+    type: collection
+    path: src/content/opiniao
+    format: yaml-frontmatter
+    filename: "{year}-{month}-{day}-{primary}.md"
+    view:
+      primary: title
+      sort: date
+      order: desc
+      fields: [title, date, outlet]
+    fields:
+      - name: title
+        label: Título
+        type: string
+        required: true
+      - name: date
+        label: Data de publicação
+        type: date
+      - name: authors
+        label: Autores
+        type: string
+        list: true
+        description: "Um nome por linha, tal como deve aparecer (ex.: Tiago Neves)."
+      - name: summary
+        label: Resumo
+        type: text
+        description: "Uma ou duas frases. Aparece por baixo do título, no destaque da página inicial e na newsletter."
+      - name: outlet
+        label: Publicado em (jornal ou revista)
+        type: string
+        description: "Só para textos publicados noutro sítio (ex.: Público). Para um texto do próprio site, deixar vazio."
+      - name: url
+        label: Ligação para o texto no jornal
+        type: string
+        description: "Só para textos publicados noutro sítio. Para um texto do próprio site, deixar vazio."
+      - name: dateText
+        label: Data em texto (opcional)
+        type: string
+        description: "Substitui a data quando não se sabe o dia (ex.: Outono, nº 201, pp. 29). Normalmente fica vazio."
+      - name: draft
+        label: Rascunho (não publicar ainda)
+        type: boolean
+      - name: body
+        label: Texto
+        type: rich-text
+        description: "Só para textos do próprio site. Para textos publicados noutro sítio, deixar vazio."
+
+  - name: publicacoes
+    label: Publicações
+    type: file
+    path: src/data/publicacoes.json
+    format: json
+    list: true
+    fields:
+      - name: type
+        label: Tipo
+        type: select
+        required: true
+        values:
+          - { value: art, label: Artigo em revista }
+          - { value: book, label: Livro }
+          - { value: chap, label: Capítulo de livro }
+          - { value: proc, label: Texto em atas }
+          - { value: issue, label: Organização de número temático }
+      - name: year
+        label: Ano
+        type: number
+        required: true
+      - name: inPress
+        label: No prelo
+        type: boolean
+      - name: who
+        label: Autores do site (para os filtros)
+        type: select
+        list: true
+        values:
+          - { value: tn, label: Tiago Neves }
+          - { value: gn, label: Gil Nata }
+      - name: authors
+        label: Autores (APA 7)
+        type: string
+        required: true
+        description: "Ex.: Neves, T., Toledo, C., & Nata, G."
+      - name: title
+        label: Título
+        type: string
+        required: true
+        description: "Para pôr em itálico, rodear com asteriscos: *Título do livro*."
+      - name: source
+        label: Revista, livro ou atas (APA 7)
+        type: string
+        description: "Ex.: *Higher Education, 68*(6), 851–874. Itálico entre asteriscos."
+      - name: doi
+        label: DOI
+        type: string
+        description: "Só o DOI, sem https://doi.org/ (ex.: 10.1007/s10734-014-9748-7)."
+      - name: url
+        label: Ligação (se não houver DOI)
+        type: string
+
+  - name: media
+    label: Media
+    type: file
+    path: src/data/media.json
+    format: json
+    list: true
+    fields:
+      - name: date
+        label: Data
+        type: date
+      - name: outlet
+        label: Órgão de comunicação social
+        type: string
+        required: true
+      - name: kind
+        label: Tipo
+        type: select
+        values:
+          - { value: news, label: Notícia }
+          - { value: int, label: Entrevista }
+          - { value: tv, label: Televisão }
+          - { value: col, label: Crónica }
+      - name: title
+        label: Título
+        type: string
+        required: true
+      - name: url
+        label: Ligação
+        type: string
+
+  - name: projetos
+    label: Projetos
+    type: file
+    path: src/data/projetos.json
+    format: json
+    list: true
+    description: "A ordem desta lista é a ordem no site."
+    fields:
+      - name: name
+        label: Nome curto
+        type: string
+        required: true
+      - name: period
+        label: Período
+        type: string
+        description: "Ex.: 2021–2024, ou «Em curso» (aparece «Ongoing» na versão inglesa)."
+      - name: title_pt
+        label: Título (PT)
+        type: string
+      - name: title_en
+        label: Título (EN)
+        type: string
+      - name: funding_pt
+        label: Financiamento (PT)
+        type: string
+      - name: funding_en
+        label: Financiamento (EN)
+        type: string
+      - name: role_pt
+        label: Participação (PT)
+        type: string
+      - name: role_en
+        label: Participação (EN)
+        type: string
+      - name: url
+        label: Página do projeto
+        type: string
+
+  - name: pessoas
+    label: Quem somos
+    type: file
+    path: src/data/pessoas.json
+    format: json
+    list: true
+    fields:
+      - name: id
+        label: Código interno
+        type: string
+        readonly: true
+      - name: name
+        label: Nome
+        type: string
+      - name: initials
+        label: Iniciais
+        type: string
+      - name: affiliation
+        label: Afiliação
+        type: string
+      - name: bio_pt
+        label: Nota biográfica (PT)
+        type: text
+        description: "Itálico entre asteriscos: *Educação, Sociedade & Culturas*."
+      - name: bio_en
+        label: Nota biográfica (EN)
+        type: text
+      - name: links
+        label: Ligações (ORCID, Ciência Vitae, etc.)
+        type: object
+        list: true
+        fields:
+          - name: label
+            label: Nome
+            type: string
+          - name: url
+            label: Endereço
+            type: string
+
+  - name: site
+    label: Textos gerais
+    type: file
+    path: src/data/site.json
+    format: json
+    fields:
+      - name: hero_pt
+        label: Apresentação no topo (PT)
+        type: text
+      - name: hero_en
+        label: Apresentação no topo (EN)
+        type: text
+      - name: together_pt
+        label: Texto sobre o trabalho conjunto (PT)
+        type: text
+      - name: together_en
+        label: Texto sobre o trabalho conjunto (EN)
+        type: text
+      - name: disclaimer_pt
+        label: Nota de rodapé (PT)
+        type: text
+      - name: disclaimer_en
+        label: Nota de rodapé (EN)
+        type: text
+      - name: buttondown_username
+        label: Nome de utilizador no Buttondown (newsletter)
+        type: string
+        description: "Quando estiver preenchido, aparece no rodapé a caixa para subscrever a newsletter."

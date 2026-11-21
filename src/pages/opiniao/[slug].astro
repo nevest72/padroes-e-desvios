@@ -1,0 +1,36 @@
+---
+import { render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import { getOpinion } from '../../lib/opiniao.js';
+import { fmtDateLong, isoDate, joinNames } from '../../lib/format.js';
+
+// Só os textos próprios do site têm página aqui; os publicados em jornais ligam para fora.
+export async function getStaticPaths() {
+  const all = await getOpinion();
+  return all.filter(o => o.native).map(o => ({ params: { slug: o.id }, props: { item: o } }));
+}
+const { item } = Astro.props;
+const { Content } = await render(item.entry);
+---
+<Base lang="pt" title={item.title} description={item.summary || item.title}>
+  <Fragment slot="head">
+    {item.date && <meta property="article:published_time" content={isoDate(item.date)}>}
+  </Fragment>
+  <article class="article">
+    <div class="wrap">
+      <header class="article-head">
+        <p class="article-back"><a href="/#opiniao">← Opinião</a></p>
+        <p class="meta"><span class="outlet">Padrões e Desvios</span>{item.date && <time datetime={isoDate(item.date)}>{fmtDateLong(item.date)}</time>}</p>
+        <h1>{item.title}</h1>
+        {item.summary && <p class="article-sum">{item.summary}</p>}
+        <p class="op-by" set:html={'Por ' + joinNames(item.authors, ' e ')} />
+      </header>
+      <div class="prose">
+        <Content />
+      </div>
+      <footer class="article-foot">
+        <p>Os textos de opinião vinculam apenas quem os assina. <a href="/#opiniao">Mais textos de opinião</a>.</p>
+      </footer>
+    </div>
+  </article>
+</Base>

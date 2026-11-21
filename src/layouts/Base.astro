@@ -1,0 +1,87 @@
+---
+import '@fontsource-variable/archivo/wdth.css';
+import '@fontsource-variable/newsreader/opsz.css';
+import '@fontsource-variable/newsreader/opsz-italic.css';
+import '../styles/global.css';
+import { tr } from '../lib/i18n.js';
+import site from '../data/site.json';
+
+interface Props { lang: 'pt' | 'en'; title?: string; description?: string; home?: boolean; altHref?: string; }
+const { lang, title, description, home = false, altHref } = Astro.props;
+const t = tr(lang);
+const base = lang === 'en' ? '/en/' : '/';
+const anchor = (h: string) => (home ? '' : base) + h;
+const pageTitle = title ? `${title} · Padrões e Desvios` : 'Padrões e Desvios';
+const desc = description || (lang === 'en' ? site.hero_en : site.hero_pt);
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const other = altHref ?? (lang === 'pt' ? '/en/' : '/');
+const disclaimer = lang === 'en' ? site.disclaimer_en : site.disclaimer_pt;
+const bd = site.buttondown_username?.trim();
+---
+<!DOCTYPE html>
+<html lang={t('htmlLang')}>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>{pageTitle}</title>
+  <meta name="description" content={desc}>
+  <link rel="canonical" href={canonical}>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="alternate" type="application/rss+xml" title="Padrões e Desvios" href="/rss.xml">
+  {home && <link rel="alternate" hreflang={lang === 'pt' ? 'en' : 'pt-PT'} href={new URL(other, Astro.site)}>}
+  <meta property="og:title" content={title || 'Padrões e Desvios'}>
+  <meta property="og:description" content={desc}>
+  <meta property="og:type" content={home ? 'website' : 'article'}>
+  <meta property="og:url" content={canonical}>
+  <meta property="og:locale" content={lang === 'en' ? 'en_GB' : 'pt_PT'}>
+  <slot name="head" />
+</head>
+<body>
+<header class="site-head">
+  <div class="wrap head-row">
+    <a class="brand" href={home ? '#topo' : base}>Padrões e Desvios</a>
+    <nav class="nav" id="nav" aria-label={t('navAria')}>
+      <a href={anchor('#opiniao')}>{t('nav.op')}</a>
+      <a href={anchor('#media')}>{t('nav.media')}</a>
+      <a href={anchor('#trabalho')} data-type="all">{t('nav.pub')}</a>
+      <a href={anchor('#projetos')}>{t('nav.proj')}</a>
+      <a href={anchor('#quem-somos')}>{t('nav.about')}</a>
+    </nav>
+    <a class="lang" id="langBtn" href={other} hreflang={lang === 'pt' ? 'en' : 'pt-PT'} aria-label={t('langAria')}>{t('langTo')}</a>
+  </div>
+</header>
+
+<main>
+  <slot />
+</main>
+
+<footer class="site-foot">
+  <div class="wrap foot-grid">
+    <div>
+      {bd ? (
+        <form action={`https://buttondown.com/api/emails/embed-subscribe/${bd}`} method="post" target="_blank" id="subForm">
+          <label class="sub-label" for="email">{t('sub.h')}</label>
+          <div class="sub-row">
+            <input id="email" name="email" type="email" required autocomplete="email" placeholder={t('sub.ph')}>
+            <button type="submit">{t('sub.btn')}</button>
+          </div>
+          <p class="sub-note">{t('sub.note')}</p>
+        </form>
+      ) : (
+        <div>
+          <p class="sub-label">{t('sub.h')}</p>
+          <p class="sub-note">{t('sub.off')}</p>
+        </div>
+      )}
+      <p class="feed-link"><a href="/rss.xml">{t('rss')}</a></p>
+    </div>
+    <div>
+      <p class="foot-name">Padrões e Desvios</p>
+      <p class="foot-small">{disclaimer}</p>
+      <p class="foot-small">© {new Date().getFullYear()} Tiago Neves, Gil Nata</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
