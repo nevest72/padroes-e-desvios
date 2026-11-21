@@ -1,0 +1,55 @@
+# Newsletter: envia por email (Buttondown) cada texto de opinião novo.
+# Corre sozinho quando um texto é criado ou alterado no editor.
+# Também se pode correr à mão em Actions → Newsletter → Run workflow (com a opção «rascunho» para testar).
+name: Newsletter
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "src/content/opiniao/**"
+  workflow_dispatch:
+    inputs:
+      modo:
+        description: "enviar = envia aos subscritores; rascunho = só cria o email no Buttondown, para ver como fica"
+        type: choice
+        options: [rascunho, enviar]
+        default: rascunho
+      texto:
+        description: "Opcional: nome do ficheiro de um texto (sem .md) para o tratar mesmo que já tenha sido enviado. Útil para testar com «rascunho»."
+        type: string
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: newsletter
+  cancel-in-progress: false
+
+jobs:
+  enviar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install --quiet pyyaml
+      - name: Enviar textos novos
+        env:
+          BUTTONDOWN_API_KEY: ${{ secrets.BUTTONDOWN_API_KEY }}
+          MODO: ${{ inputs.modo || 'enviar' }}
+          FORCAR: ${{ inputs.texto }}
+        run: python scripts/newsletter.py
+      - name: Guardar o registo dos textos enviados
+        run: |
+          if ! git diff --quiet -- src/data/newsletter-enviados.json; then
+            git config user.name "newsletter-bot"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add src/data/newsletter-enviados.json
+            git commit -m "Newsletter: registo de envio"
+            git pull --rebase --quiet
+            git push
+          fi

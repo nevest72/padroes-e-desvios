@@ -56,10 +56,23 @@ O projeto `padroes-e-desvios` está criado no Cloudflare (*Workers & Pages*) e l
 2. Escolher o repositório `padroes-e-desvios`. Os separadores (Opinião, Publicações, Media, Projetos, Quem somos, Textos gerais) aparecem logo.
 3. Cada «Save» grava no GitHub, e o Cloudflare publica a nova versão em 1 a 2 minutos.
 
-### 5. Newsletter (Buttondown)
+### 5. Newsletter (Buttondown, envio automático gratuito)
+Cada texto de opinião novo é enviado por email aos subscritores, sem custos. Quem faz o envio é uma automação do GitHub (`.github/workflows/newsletter.yml` e `scripts/newsletter.py`), através da API do Buttondown. A funcionalidade paga *RSS-to-email* não é usada.
+
+**Preparar (uma vez só):**
 1. Criar conta em https://buttondown.com. É gratuita até 100 subscritores.
-2. No editor, em *Textos gerais*, escrever o nome de utilizador do Buttondown no campo «Nome de utilizador no Buttondown». A caixa de subscrição aparece no rodapé do site.
-3. **Envio automático a partir do RSS:** no Buttondown, ligar o feed `https://padroesedesvios.eu/rss.xml` à funcionalidade *RSS-to-email*. Atenção: esta funcionalidade é um extra pago do Buttondown. Sem ela, cada texto novo pode ser enviado à mão a partir do Buttondown, em poucos cliques.
+2. No editor, em *Textos gerais*, escrever o nome de utilizador do Buttondown. A caixa de subscrição aparece no rodapé do site.
+3. No Buttondown, copiar a chave da API: *Settings → API*.
+4. No GitHub, abrir o repositório e ir a *Settings → Secrets and variables → Actions → New repository secret*. Nome: `BUTTONDOWN_API_KEY`; valor: a chave copiada.
+5. Testar sem enviar nada: *Actions → Newsletter → Run workflow*, modo **rascunho**, e em «texto» escrever o nome de um ficheiro de opinião, por exemplo `2026-11-18-a-analise-do-publico-a-inflacao-de-notas`. O email aparece como rascunho no Buttondown, para ver como fica, e depois pode ser apagado.
+
+**Como funciona depois:**
+- Quando se grava no editor um texto de opinião novo (não marcado como rascunho e com data dos últimos 14 dias), a automação espera que a página esteja publicada e envia o email.
+  - Num texto do próprio site, o email leva o texto completo.
+  - Num texto publicado num jornal, o email leva o resumo e a ligação.
+- Cada texto é enviado uma única vez. O registo fica em `src/data/newsletter-enviados.json`. Corrigir um texto depois de enviado não o reenvia.
+- Não se deve mudar o nome do ficheiro de um texto já publicado, porque passaria a contar como texto novo.
+- Para publicar um texto sem o enviar por email, acrescenta-se o nome do ficheiro (sem `.md`) ao registo antes de lhe tirar a marca de rascunho.
 
 ---
 
