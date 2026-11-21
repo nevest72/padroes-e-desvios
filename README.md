@@ -4,7 +4,7 @@ Site de Tiago Neves e Gil Nata: textos de opinião sobre a atualidade educativa 
 Endereço previsto: **https://padroesedesvios.eu**
 
 - **Gerador:** [Astro](https://astro.build). Transforma os ficheiros de conteúdo em páginas HTML estáticas.
-- **Alojamento:** Cloudflare Pages (gratuito). Publica o site de novo sempre que algo muda neste repositório.
+- **Alojamento:** Cloudflare Workers (gratuito para sites estáticos). Publica o site de novo sempre que algo muda neste repositório.
 - **Editor no browser:** [Pages CMS](https://app.pagescms.org) (gratuito). Formulários para editar os conteúdos sem tocar em código.
 - **Newsletter:** Buttondown, a partir do feed RSS do site (`/rss.xml`).
 
@@ -42,20 +42,14 @@ As referências seguem a APA 7. Para pôr texto em itálico, rodeia-se com aster
 2. Ligar o GitHub ao Claude (claude.ai, Definições, ligação ao GitHub), para o Claude criar o repositório `padroes-e-desvios` e enviar estes ficheiros. Em alternativa, criar o repositório à mão e carregar os ficheiros pela página do GitHub.
 3. No repositório, em *Settings → Collaborators*, convidar o Gil, que também precisa de conta GitHub.
 
-### 2. Cloudflare Pages
-1. Criar conta em https://dash.cloudflare.com/sign-up (gratuita).
-2. *Workers & Pages → Create → Pages → Connect to Git*, autorizar o GitHub e escolher `padroes-e-desvios`.
-3. Configuração do build:
-   - Framework preset: **Astro**
-   - Build command: `npm run build`
-   - Build output directory: `dist`
-4. *Save and Deploy*. Uns minutos depois, o site fica em `https://padroes-e-desvios.pages.dev`.
+### 2. Cloudflare (feito)
+O projeto `padroes-e-desvios` está criado no Cloudflare (*Workers & Pages*) e ligado a este repositório. Cada alteração no GitHub publica o site de novo automaticamente. O endereço provisório é `https://padroes-e-desvios.c6wfy24nv2.workers.dev`.
 
 ### 3. Domínio padroesedesvios.eu
 1. Registar `padroesedesvios.eu` num registador que venda .eu (por exemplo, um registador português ou europeu). O Cloudflare não vende .eu. Um .eu exige um titular residente ou cidadão da UE.
 2. No Cloudflare: *Add a domain → padroesedesvios.eu → plano Free*. O Cloudflare indica dois *nameservers*.
 3. No registador, trocar os *nameservers* pelos do Cloudflare. A mudança pode demorar algumas horas.
-4. No Cloudflare, abrir o projeto Pages, ir a *Custom domains*, juntar `padroesedesvios.eu` e depois `www.padroesedesvios.eu`. O certificado HTTPS é tratado automaticamente.
+4. No Cloudflare, abrir o projeto `padroes-e-desvios`, ir a *Settings → Domains & Routes → Add → Custom domain*, juntar `padroesedesvios.eu` e depois `www.padroesedesvios.eu`. O certificado HTTPS é tratado automaticamente.
 
 ### 4. Editor (Pages CMS)
 1. Entrar em https://app.pagescms.org com a conta GitHub.
