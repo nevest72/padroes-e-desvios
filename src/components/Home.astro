@@ -20,6 +20,10 @@ const opinion = await getOpinion();
 const [feature, ...archive] = opinion;
 const opWhen = (o: any) => o.dateText || fmtDate(o.date, lang, t('nd'));
 const opOutlet = (o: any) => o.original ? o.original.outlet : 'Padrões e Desvios';
+// Na versão inglesa, usar o título e a página traduzidos quando existem.
+const opTitle = (o: any) => (lang === 'en' && o.hasEn ? o.title_en : o.title);
+const opHref = (o: any) => (lang === 'en' && o.hasEn ? o.enHref : o.href);
+const opSum = (o: any) => (lang === 'en' ? (o.hasEn ? o.summary_en : '') : o.summary);
 
 // Publicações (ordem: ano, do mais recente; "no prelo" primeiro)
 const pubs = [...pubsData].sort((a, b) => (b.inPress ? 1 : 0) - (a.inPress ? 1 : 0) || b.year - a.year);
@@ -92,17 +96,17 @@ const clientStrings = {
       {feature && (
         <article class="op-feature">
           <p class="meta"><span class="outlet">{opOutlet(feature)}</span><time datetime={isoDate(feature.date) || undefined}>{opWhen(feature)}</time></p>
-          <h3>{feature.href ? <a href={feature.href}>{feature.title}</a> : feature.title}</h3>
+          <h3 lang={lang === 'en' && !feature.hasEn ? 'pt-PT' : undefined}>{opHref(feature) ? <a href={opHref(feature)}>{opTitle(feature)}</a> : opTitle(feature)}</h3>
           <p class="op-by" set:html={joinNames(feature.authors, t('and'))} />
-          {feature.summary && <p class="op-sum">{feature.summary}</p>}
-          {feature.href && <p class="op-read"><a href={feature.href}>{feature.native ? t('op.readHere') : t('op.read') + feature.outlet}</a></p>}
+          {opSum(feature) && <p class="op-sum">{opSum(feature)}</p>}
+          {opHref(feature) && <p class="op-read"><a href={opHref(feature)}>{feature.native ? (lang === 'en' && !feature.hasEn ? t('op.readPt') : t('op.readHere')) : t('op.read') + feature.outlet}</a></p>}
         </article>
       )}
       <ol class="op-archive">
         {archive.map(o => (
           <li>
             <p class="meta"><span class="outlet">{opOutlet(o)}</span><time datetime={isoDate(o.date) || undefined}>{opWhen(o)}</time></p>
-            <h3>{o.href ? <a href={o.href}>{o.title}</a> : o.title}</h3>
+            <h3 lang={lang === 'en' && !o.hasEn ? 'pt-PT' : undefined}>{opHref(o) ? <a href={opHref(o)}>{opTitle(o)}</a> : opTitle(o)}</h3>
             <p class="op-by" set:html={joinNames(o.authors, t('and'))} />
           </li>
         ))}

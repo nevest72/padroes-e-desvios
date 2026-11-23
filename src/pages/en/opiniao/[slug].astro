@@ -1,0 +1,44 @@
+---
+import Base from '../../../layouts/Base.astro';
+import { getOpinion, inOutlet, mdToHtml } from '../../../lib/opiniao.js';
+import { fmtDate, isoDate, joinNames } from '../../../lib/format.js';
+
+// Versão inglesa dos textos de opinião que têm tradução.
+export async function getStaticPaths() {
+  const all = await getOpinion();
+  return all.filter(o => o.hasEn).map(o => ({ params: { slug: o.id }, props: { item: o } }));
+}
+const { item } = Astro.props;
+const html = mdToHtml(item.body_en);
+const longDate = (d: any) => {
+  const iso = isoDate(d); if (!iso) return '';
+  const [y, m, day] = iso.split('-');
+  const M = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  return `${parseInt(day, 10)} ${M[parseInt(m, 10) - 1]} ${y}`;
+};
+---
+<Base lang="en" title={item.title_en} description={item.summary_en || item.title_en} altHref={`/opiniao/${item.id}/`}>
+  <Fragment slot="head">
+    <link rel="alternate" hreflang="pt-PT" href={new URL(`/opiniao/${item.id}/`, Astro.site)}>
+    {item.date && <meta property="article:published_time" content={isoDate(item.date)}>}
+  </Fragment>
+  <article class="article">
+    <div class="wrap">
+      <header class="article-head">
+        <p class="article-back"><a href="/en/#opiniao">← Opinion</a></p>
+        <p class="meta"><span class="outlet">Padrões e Desvios</span>{item.date && <time datetime={isoDate(item.date)}>{longDate(item.date)}</time>}</p>
+        <h1>{item.title_en}</h1>
+        {item.summary_en && <p class="article-sum">{item.summary_en}</p>}
+        <p class="op-by" set:html={'By ' + joinNames(item.authors, ' and ')} />
+        <p class="article-orig">
+          Translated from the Portuguese. <a href={`/opiniao/${item.id}/`} hreflang="pt-PT" lang="pt-PT">Read the original</a>.
+          {item.original && <> Originally published {inOutlet(item.original.outlet)}{item.date && <> on {longDate(item.date)}</>}.</>}
+        </p>
+      </header>
+      <div class="prose" set:html={html} />
+      <footer class="article-foot">
+        <p>Opinion pieces reflect only the views of their authors. <a href="/en/#opiniao">More opinion pieces</a>.</p>
+      </footer>
+    </div>
+  </article>
+</Base>

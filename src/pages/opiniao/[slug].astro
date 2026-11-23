@@ -12,9 +12,10 @@ export async function getStaticPaths() {
 const { item } = Astro.props;
 const { Content } = await render(item.entry);
 ---
-<Base lang="pt" title={item.title} description={item.summary || item.title}>
+<Base lang="pt" title={item.title} description={item.summary || item.title} altHref={item.enHref || '/en/'}>
   <Fragment slot="head">
     {item.date && <meta property="article:published_time" content={isoDate(item.date)}>}
+    {item.enHref && <link rel="alternate" hreflang="en" href={new URL(item.enHref, Astro.site)}>}
   </Fragment>
   <article class="article">
     <div class="wrap">
@@ -30,6 +31,7 @@ const { Content } = await render(item.entry);
             {item.original.url && <> <a href={item.original.url}>Ler {emOutlet(item.original.outlet)}</a>.</>}
           </p>
         )}
+        {item.enHref && <p class="article-orig"><a href={item.enHref} hreflang="en" lang="en">Read in English</a></p>}
       </header>
       <div class="prose">
         <Content />

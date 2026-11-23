@@ -15,6 +15,10 @@ const opiniao = defineCollection({
     outlet: z.string().optional().default(''),
     url: z.string().optional().default(''),
     summary: z.string().optional().default(''),
+    // Versão inglesa (opcional): título, resumo e texto traduzidos.
+    title_en: z.string().optional().default(''),
+    summary_en: z.string().optional().default(''),
+    body_en: z.string().optional().default(''),
     draft: z.boolean().optional().default(false)
   })
 });

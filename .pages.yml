@@ -53,6 +53,17 @@ content:
         label: Texto
         type: rich-text
         description: "O texto completo. Se saiu num jornal, colar aqui a vossa versão: o site cria uma página própria com a indicação «Publicado originalmente no …, a …». Se ficar vazio, o título liga diretamente para o jornal."
+      - name: title_en
+        label: Título (EN)
+        type: string
+        description: "Versão inglesa (opcional). Com título e texto em inglês, o texto ganha página em inglês."
+      - name: summary_en
+        label: Resumo (EN)
+        type: text
+      - name: body_en
+        label: Texto (EN)
+        type: rich-text
+        description: "Tradução inglesa do texto. As imagens podem ser as mesmas da versão portuguesa."
 
   - name: publicacoes
     label: Publicações
