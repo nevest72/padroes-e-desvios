@@ -1,11 +1,21 @@
 ---
-title: "Quase 20 anos de rankings… Resultados?"
+title: Quase 20 anos de rankings… Resultados?
 date: 2019-02-16
 authors:
-  - "Gil Nata"
-  - "Tiago Neves"
-outlet: "Público"
-url: "https://www.publico.pt/2019/02/16/sociedade/opiniao/quase-20-anos-rankings-resultados-1861949"
-summary: ""
+  - Gil Nata
+  - Tiago Neves
+outlet: Público
+url: https://www.publico.pt/2019/02/16/sociedade/opiniao/quase-20-anos-rankings-resultados-1861949
 draft: false
 ---
+Foi em 2001, depois de uma luta de anos por parte do PÚBLICO e do seu então diretor José Manuel Fernandes, que ﬁnalmente o Ministério da Educação tornou públicos os dados dos resultados dos exames nacionais.
+
+Mas o que ﬁzeram os órgãos de informação com essas bases de dados? Genericamente, uma seriação das escolas pela média das notas obtidas pelos alunos dessas escolas nos exames nacionais. E assim tem sido, todos os anos, desde 2001 até agora. Qual a intenção de quem produz e publica estes rankings? Como aﬁrmava José Manuel Fernandes, no editorial do terceiro ano de publicação dos rankings, estes “são hoje um instrumento de trabalho nas escolas e de informação dos pais”. Ao permitirem o conhecimento das melhores e piores escolas, estes rankings, aos olhos de quem os defende, permitem saber quais as melhores e as piores práticas, permitem aos proﬁssionais de uma escola terem a consciência do lugar que ocupam e trabalhar para o melhorarem, inspirando-se nas escolas com bons resultados. Adicionalmente, os pais podem escolher a melhor escola para os seus ﬁlhos através da conveniente e acessível consulta de um ranking anual. Em conjunto, estes fatores resultariam na melhoria do sistema educativo.
+
+Assim, a pergunta impõe-se: dezoito rankings depois, existem provas do impacto positivo da sua publicação na melhoria do sistema educativo português? Dos trabalhos por nós realizados e da literatura cientíﬁca que revimos sobre esta matéria, não encontramos nada que o indique. Numa das nossas investigações entrevistámos diretores de escolas em diferentes posições do ranking. Todos — ou seja, diretores de escolas públicas e privadas, de escolas acima, no meio, e abaixo da tabela consideraram este tipo de rankings injusto e simplista, designadamente porque não contempla o tipo de alunos com que cada escola trabalha. Adicionalmente, nenhum dos diretores entrevistados referiu qualquer inﬂuência positiva no trabalho das respetivas escolas devido aos rankings. Pelo contrário, vários (em particular aqueles de escolas em posições inferiores) referiram a pressão negativa que estes rankings impunham às suas escolas: para além da frustração e desânimo causados pela “publicidade” de um mau lugar, o excessivo ênfase nos resultados dos exames tem como consequência a alteração do trabalho da escola, desviando a mesma da sua principal função de formação de cidadãos para o treino intensivo de preparação para exames.
+
+A má publicidade tem ainda uma outra consequência: como previsto pelos defensores destes rankings e conﬁrmado pelos diretores entrevistados, os pais reagem, e da maneira prevista, à informação publicada. E, assim, as escolas nas piores posições perdem os seus melhores alunos. Até porque, quando as escolas bem classiﬁcadas têm mais candidatos do que vagas, podem dar-se ao luxo, até certo ponto, de escolher... E, se a medida do sucesso são os resultados nos exames, a escolha dos alunos pelas notas pode bem ser o melhor prenúncio de um bom resultado no próximo ranking. No ﬁnal de contas, todos querem os melhores jogadores na sua equipa. No entanto, a consequência geral é bem diferente da esperada. Em vez da melhoria do sistema de ensino, a escolha dos melhores alunos pelas escolas já bem posicionadas resulta muito provavelmente num sistema progressivamente mais polarizado, com escolas cada vez mais de elite, e as outras, onde se concentram aqueles que não tiveram lugar nas primeiras.
+
+De forma facilmente compreensível, as recomendações de organizações internacionais como a OCDE apontam caminhos bem diferentes para a melhoria dos sistemas educativos. Duas são habitualmente repetidas: a alocação dos melhores professores para as escolas com os “piores” alunos e a não separação dos alunos em turmas ou escolas dos melhores vs. piores. Na mesma linha, há quem aloque alunos às escolas de forma a garantir uma distribuição equilibrada de alunos desfavorecidos (Nijmegen, Holanda).
+
+Assim, passados 20 anos, a pergunta impõe-se: onde estão as evidências de que a publicação dos rankings tenha contribuído para a melhoria do sistema educativo?
