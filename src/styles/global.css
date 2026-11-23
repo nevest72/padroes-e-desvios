@@ -190,6 +190,8 @@ h2.sec { font-family: var(--font-display); font-stretch: 112%; font-weight: 750;
 }
 .person h3 { font-family: var(--font-display); font-stretch: 112%; font-weight: 750; font-size: 1.5rem; line-height: 1.15; margin: 0 0 .25rem; }
 .person .aff { font: 500 1rem/1.4 var(--font-display); color: var(--muted); margin: 0 0 .85rem; }
+.person .aff a { text-decoration-color: color-mix(in srgb, var(--pen) 45%, transparent); }
+.person .aff a:hover { text-decoration-color: var(--pen); }
 .person p.bio { margin: 0 0 .85rem; }
 .links { font: 500 1rem/1.4 var(--font-display); display: flex; flex-wrap: wrap; gap: .3rem 1.25rem; margin: 0; }
 .links .pending { color: var(--muted); }

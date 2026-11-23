@@ -3,7 +3,16 @@
     "id": "tn",
     "name": "Tiago Neves",
     "initials": "TN",
-    "affiliation": "FPCEUP, CIIE",
+    "affiliations": [
+      {
+        "label": "FPCEUP",
+        "url": "https://www.fpce.up.pt/"
+      },
+      {
+        "label": "CIIE",
+        "url": "https://ciie.fpce.up.pt/"
+      }
+    ],
     "bio_pt": "Professor Associado de Ciências da Educação na Faculdade de Psicologia e de Ciências da Educação da Universidade do Porto (FPCEUP) e membro integrado do CIIE – Centro de Investigação e Intervenção Educativas. Dirige o Programa Doutoral em Ciências da Educação da FPCEUP e a revista *Educação, Sociedade & Culturas*. Licenciado em Sociologia pela Universidade do Porto, mestre em Contemporary Urban Studies pelo Goldsmiths College (Universidade de Londres) e doutorado em Ciências da Educação pela Universidade do Porto.",
     "bio_en": "Associate Professor of Education Sciences at the Faculty of Psychology and Education Sciences, University of Porto (FPCEUP), and integrated member of CIIE – Centre for Research and Intervention in Education. He directs FPCEUP’s Doctoral Programme in Education Sciences and the journal *Educação, Sociedade & Culturas*. He holds a degree in Sociology from the University of Porto, an MA in Contemporary Urban Studies from Goldsmiths College (University of London) and a PhD in Education Sciences from the University of Porto.",
     "links": [
@@ -29,7 +38,20 @@
     "id": "gn",
     "name": "Gil Nata",
     "initials": "GN",
-    "affiliation": "UTAD, CETRAD, CIIE",
+    "affiliations": [
+      {
+        "label": "UTAD",
+        "url": "https://www.utad.pt/"
+      },
+      {
+        "label": "CETRAD",
+        "url": "https://www.cetrad.utad.pt/"
+      },
+      {
+        "label": "CIIE",
+        "url": "https://ciie.fpce.up.pt/"
+      }
+    ],
     "bio_pt": "Professor Auxiliar no Departamento de Educação e Psicologia da Universidade de Trás-os-Montes e Alto Douro (UTAD), onde é vice-presidente da licenciatura em Psicologia. É membro integrado do CETRAD – Centro de Estudos Transdisciplinares para o Desenvolvimento e membro colaborador do CIIE – Centro de Investigação e Intervenção Educativas. Coordenou o projeto «Equidade educativa através do PISA: resultados e discursos», financiado pela FCT, e foi colíder de um pacote de trabalho do projeto europeu ISOTIS. Licenciado e doutorado em Psicologia pela Universidade do Porto.",
     "bio_en": "Assistant Professor in the Department of Education and Psychology at the University of Trás-os-Montes e Alto Douro (UTAD), where he is deputy director of the undergraduate degree in Psychology. He is a full member of CETRAD – Centre for Transdisciplinary Development Studies and a collaborating member of CIIE – Centre for Research and Intervention in Education. He led the FCT-funded project “Educational equity through PISA: results and discourses” and co-led a work package of the European project ISOTIS. He holds a first degree and a PhD in Psychology from the University of Porto.",
     "links": [

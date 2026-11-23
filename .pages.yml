@@ -203,9 +203,17 @@ content:
       - name: initials
         label: Iniciais
         type: string
-      - name: affiliation
-        label: Afiliação
-        type: string
+      - name: affiliations
+        label: Afiliações (instituições e centros, com ligação)
+        type: object
+        list: true
+        fields:
+          - name: label
+            label: Sigla
+            type: string
+          - name: url
+            label: Endereço
+            type: string
       - name: bio_pt
         label: Nota biográfica (PT)
         type: text

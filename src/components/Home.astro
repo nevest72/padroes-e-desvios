@@ -218,7 +218,7 @@ const clientStrings = {
             <div class="mono" aria-hidden="true">{p.initials}</div>
             <div>
               <h3>{p.name}</h3>
-              <p class="aff">{p.affiliation}</p>
+              <p class="aff">{(p.affiliations || []).map((a, i) => <>{i > 0 && ', '}{a.url ? <a href={a.url}>{a.label}</a> : a.label}</>)}</p>
               <p class="bio" set:html={italics(L(p, 'bio'))} />
               <p class="links">{p.links.map(l => <a href={l.url}>{l.label}</a>)}</p>
             </div>
