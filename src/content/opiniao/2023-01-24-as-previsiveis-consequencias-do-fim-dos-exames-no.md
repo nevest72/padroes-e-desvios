@@ -1,11 +1,23 @@
 ---
-title: "As previsíveis consequências do fim dos exames no ensino obrigatório"
+title: As previsíveis consequências do fim dos exames no ensino obrigatório
 date: 2023-01-24
 authors:
-  - "Gil Nata"
-  - "Tiago Neves"
-outlet: "Público"
-url: "https://www.publico.pt/2023/01/24/opiniao/opiniao/previsiveis-consequencias-fim-exames-ensino-obrigatorio-2036125"
-summary: ""
+  - Gil Nata
+  - Tiago Neves
+outlet: Público
+url: https://www.publico.pt/2023/01/24/opiniao/opiniao/previsiveis-consequencias-fim-exames-ensino-obrigatorio-2036125
 draft: false
 ---
+Foi recentemente noticiado que está em cima da mesa uma proposta do Governo para mudar as regras do acesso ao ensino superior. Esta proposta prevê que, embora os exames nacionais deixem de ser obrigatórios para concluir o ensino secundário, continuem a ser um requisito obrigatório para ingressar no ensino superior.
+
+Em primeiro lugar, convém notar que, em Portugal, temos falta (e não excesso) de dados robustos e ﬁdedignos para aferirmos a evolução do nosso sistema de ensino. Os exames nacionais, ainda que meçam “apenas” conhecimentos (e não atitudes, valores ou empenho, por exemplo), são, num certo sentido, a forma mais objetiva de avaliação que possuímos. De facto, são o único momento em que os alunos de todo o país fazem as mesmas provas de avaliação em circunstâncias semelhantes, sendo estas corrigidas posteriormente de forma “cega”. Estas características fazem com que as notas dos exames nacionais permitam (dentro das limitações que os próprios exames comportam) comparar os alunos que os ﬁzeram, permitindo assim análises, por exemplo, às escolas que mais progresso alcançam ou à evolução do sistema educativo no que diz respeito à sua equidade.
+
+Sem exames nacionais, ﬁcaremos ainda mais deﬁcitários, perdendo-se deﬁnitivamente a possibilidade de cálculo de indicadores relevantes que o próprio Ministério da Educação tem disponibilizado, como, por exemplo, os percursos diretos de sucesso ou o alinhamento das notas internas, comummente conhecido por inﬂação de notas. Parece-nos suﬁcientemente importante para insistir: sem exames nacionais, iremos deixar de saber quais as escolas que mais inﬂacionam as notas! O fenómeno, que é uma importante fonte de iniquidade educativa no nosso país, deixará de ser notícia e/ou voltará a entrar no domínio da opinião (em vez de facto veriﬁcável), diminuindo a pressão para a sua resolução ou mitigação.
+
+Com efeito, vários estudos indicam que as notas sobem na ausência (do efeito regulador) dos exames nacionais. Daqui decorrerão, previsivelmente, menos reprovações e maiores taxas de “sucesso” no término do 12.º ano. É possível que alguns governantes, académicos e “fazedores de opinião” caiam na tentação de ler este previsível “sucesso” como indicador de maior equidade. Mas será assim? Note-se que este “sucesso” não corresponderá a qualquer ganho dos alunos em termos de conhecimentos, competências ou qualquer outra valência; este “sucesso”, a existir, será apenas consequência da remoção dos exames nacionais para efeitos de conclusão do ensino obrigatório.
+
+Será este o tipo de “equidade” que queremos promover no nosso sistema educativo? O fundamental não seria garantirmos que as notas dos estudantes são independentes da sua condição socioeconómica? Esta relação é, aliás, uma das medidas mais usadas para aferir a equidade de um sistema educativo. Ao abandonarmos os exames nacionais, abandonamos também a possibilidade do seu cálculo, relegando-nos à espera dos resultados dos grandes inquéritos internacionais (como o PISA) para que possamos saber como estamos!
+
+Outras indesejáveis consequências se adivinham… Na medida em que os exames se manterão para acesso ao ensino superior, não é crível que as escolas deixem de sentir a pressão da preparação para os exames, podendo dedicar mais tempo ao mais nobre e abrangente objetivo de formar cidadãos. O que nos parece previsível é que apenas algumas escolas deixarão de sentir essa pressão, designadamente as escolas de meios desfavorecidos. Nas escolas de meios favorecidos (privadas à cabeça, mas também muitas públicas), a pressão continuará para que respondam às expectativas dos seus públicos (alunos e pais) e, até talvez, professores. Isto acentuará, provavelmente, estas divisões, quer entre o público e o privado quer entre as escolas públicas favorecidas e desfavorecidas. Ou seja, a segregação do nosso sistema educativo tornar-se-á mais acentuada, diminuindo a sua equidade, prejudicando-se essencialmente os mais desfavorecidos, que verão as suas hipóteses de receberem uma preparação para o ingresso no ensino superior — que a literatura cientíﬁca aponta como o mais realista mecanismo de mobilidade social — ainda mais comprometidas.
+
+De tudo o que foi dito resulta ser difícil compreender como é que um Governo que aﬁrma a importância da equidade na educação toma esta opção.
