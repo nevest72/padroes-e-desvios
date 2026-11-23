@@ -29,6 +29,7 @@ Endereço previsto: **https://padroesedesvios.eu**
 - **Texto publicado num jornal, republicado no site:** preencher «Publicado em» (ex.: Público), a ligação e a data, e colar no campo «Texto» a vossa versão do texto. O site cria uma página própria com a indicação «Publicado originalmente no Público, a 18 de novembro de 2026. Ler no Público.» Assim, quem não tem assinatura do jornal pode ler o texto.
 - **Texto que fica só no jornal:** preencher «Publicado em» e a ligação e deixar «Texto» vazio. O título liga diretamente para o jornal.
 - **Rascunho:** marcar «Rascunho» guarda o texto sem o publicar.
+- **Versão inglesa:** os campos «Título (EN)», «Resumo (EN)» e «Texto (EN)» guardam a tradução. Com título e texto em inglês preenchidos, o texto ganha página em `padroesedesvios.eu/en/opiniao/…`, com a indicação «Translated from the Portuguese» e a ligação ao original, e a versão inglesa do site passa a mostrar o título traduzido.
 - **Direitos:** ao republicar, usar a versão dos autores (a que foi enviada ao jornal), não o PDF nem a captura da página do jornal.
 
 ### Publicações
