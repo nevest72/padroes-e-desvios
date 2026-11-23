@@ -1,7 +1,7 @@
 ---
 title: A análise do PÚBLICO à inflação de notas não permite sustentar a
   conclusão anunciada
-date: 2013-03-01
+date: 2026-11-18
 authors:
   - Gil Nata
   - Tiago Neves
