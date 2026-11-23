@@ -1,6 +1,6 @@
 ---
 title: Escolas privadas são “generosas” na atribuição de notas
-date: 2026-11-23
+date: 2013-03-01
 authors:
   - Tiago Neves
   - Maria João Pereira
