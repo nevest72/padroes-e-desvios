@@ -1,11 +1,34 @@
 ---
-title: "A análise do PÚBLICO à inflação de notas não permite sustentar a conclusão anunciada"
+title: A análise do PÚBLICO à inflação de notas não permite sustentar a
+  conclusão anunciada
 date: 2026-11-18
 authors:
-  - "Gil Nata"
-  - "Tiago Neves"
-outlet: "Público"
-url: "https://www.publico.pt/2026/11/18/opiniao/opiniao/analise-publico-inflacao-notas-nao-permite-sustentar-conclusao-anunciada-2195156"
-summary: ""
+  - Gil Nata
+  - Tiago Neves
+outlet: Público
+url: https://www.publico.pt/2026/11/18/opiniao/opiniao/analise-publico-inflacao-notas-nao-permite-sustentar-conclusao-anunciada-2195156
 draft: false
 ---
+**A análise do PÚBLICO sobre a inflação de notas não permite sustentar a conclusão anunciada**
+
+ No passado dia 30 de outubro, o PÚBLICO publicou uma análise da autoria de Maria Conceição A. Silva, intitulada "A ideia de que as escolas privadas inflacionam muito as notas não se confirma". Trata-se de uma questão importante para o sistema educativo português. A eventual inflação de classificações internas pode influenciar diretamente o acesso ao ensino superior, sobretudo num contexto em que a nota de candidatura resulta da combinação entre classificações escolares e exames nacionais.
+
+Contudo, a metodologia utilizada na análise não permite responder adequadamente à questão colocada. Em nossa opinião, a conclusão anunciada no título não decorre da evidência apresentada. Em investigação publicada em 2014 sobre este fenómeno, procurámos precisamente responder à questão de saber se diferentes tipos de escola atribuíam classificações internas diferentes a alunos com níveis idênticos de desempenho nos exames nacionais. A principal conclusão metodológica desse trabalho foi simples: para estudar a inflação de notas não basta comparar médias agregadas de escolas ou setores; é necessário comparar alunos com o mesmo desempenho em medidas externas de avaliação. A razão é igualmente simples: a discrepância entre a classificação interna e a classificação obtida no exame nacional não é constante ao longo da distribuição dos resultados. Um exemplo ajuda a compreender o problema. Um aluno que obtenha 0 valores num exame pode apresentar uma diferença muito elevada relativamente à classificação interna. Pelo contrário, um aluno que obtenha 18 valores no exame só poderá apresentar uma discrepância máxima de dois valores, uma vez que a escala termina nos 20 valores. Isto significa que a magnitude da diferença entre classificação interna e exame varia necessariamente consoante o resultado obtido no exame. Foi precisamente isso que observámos nos dados. Um dos gráficos publicado no nosso estudo apresenta a diferença média entre classificação interna e classificação de exame para diferentes tipos de escola e para cada intervalo de resultados obtidos nos exames nacionais (ver abaixo “Fig. 1”).
+
+![Image](blob:https:/app.pagescms.org/1fcf83ad-6da8-49ae-b3a0-85b20a8248fe)
+
+A figura mostra dois aspetos fundamentais. Em primeiro lugar, a discrepância entre classificação interna e exame diminui progressivamente à medida que os resultados nos exames aumentam. Em segundo lugar, essa discrepância não é igual para todos os tipos de escola. As escolas privadas independentes apresentam sistematicamente diferenças superiores às verificadas nas escolas públicas e nas escolas privadas com contrato de associação. O ponto crucial, porém, é outro: a dimensão da discrepância varia fortemente ao longo da distribuição das notas dos exames. Não estamos perante um fenómeno constante que possa ser adequadamente descrito através de uma única média agregada. É precisamente por essa razão que uma análise agregada dos dados pode conduzir a conclusões enganadoras. Curiosamente, quando iniciámos a nossa investigação, verificámos que as comparações agregadas produziam resultados aparentemente pouco expressivos. As diferenças médias entre setores não pareciam particularmente relevantes. Foi justamente essa observação que nos levou a aprofundar a análise e a comparar alunos com o mesmo nível de desempenho nos exames nacionais.
+
+Quando esse controlo passou a ser introduzido, surgiu um padrão muito diferente.
+
+Um outro gráfico publicado no nosso estudo permite observá-lo com maior clareza (ver abaixo “Fig. 3”). Ao analisar as diferenças relativas face ao valor médio de cada tipo de escola, verifica-se que as escolas privadas independentes apresentam sistematicamente níveis mais elevados de discrepância entre classificação interna e exame ao longo da distribuição dos resultados. Mais importante ainda, essa diferença tende a tornar-se mais evidente precisamente nos intervalos de classificação em que as notas assumem maior relevância para o acesso aos cursos mais competitivos do ensino superior.
+
+![Image](blob:https:/app.pagescms.org/8f324142-1d0b-4ecd-acef-7e7d4e4ee88c)
+
+ Esta constatação tem uma consequência metodológica importante. As escolas públicas e privadas não apresentam distribuições idênticas de alunos ao longo da escala de classificações. Em média, as escolas privadas concentram uma proporção mais elevada de alunos com classificações altas nos exames nacionais, enquanto as escolas públicas concentram uma proporção relativamente maior de alunos com classificações mais baixas. Se a discrepância entre classificação interna e exame varia ao longo da distribuição das notas, então qualquer comparação que não controle o desempenho dos alunos mistura fenómenos distintos. Nesse caso, as diferenças observadas refletem simultaneamente diferenças de avaliação e diferenças na composição dos alunos das escolas públicas e privadas, tornando impossível separar uma coisa da outra. É precisamente esse o problema da análise publicada pelo PÚBLICO. A própria autora reconhece que o indicador utilizado "não analisa de forma rigorosa" alunos com o mesmo nível de desempenho nos exames nacionais. Ora, foi precisamente esse controlo que a nossa investigação identificou como indispensável para estudar o fenómeno da inflação de notas. Sem ele, não é possível determinar se as diferenças observadas resultam efetivamente de práticas de avaliação distintas ou apenas de diferenças na distribuição dos alunos pelos vários níveis de desempenho.
+
+Importa assinalar que esta crítica não implica necessariamente que a realidade observada por nós em 2014 permaneça inalterada em 2026. Pode ter mudado, mas a análise publicada no dia 30 de outubro não permite sabê-lo. Para concluir que o grau de inflação das escolas privadas não é muito superior ao das escolas públicas, seria necessário comparar alunos com desempenhos equivalentes nos exames nacionais. A metodologia utilizada nessa análise não autoriza, portanto, a afirmação que lhe dá o título.
+
+Referência do artigo: Nata, G., Pereira, M. J., & Neves, T. (2014). Unfairness in access to higher education: a 11 year comparison of grade inflation by private and public secondary schools in Portugal. Higher Education, 68(6), 851-874.
+
+ 
