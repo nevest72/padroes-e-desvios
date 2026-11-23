@@ -1,10 +1,10 @@
 ---
 import { render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
-import { getOpinion } from '../../lib/opiniao.js';
+import { getOpinion, emOutlet } from '../../lib/opiniao.js';
 import { fmtDateLong, isoDate, joinNames } from '../../lib/format.js';
 
-// Só os textos próprios do site têm página aqui; os publicados em jornais ligam para fora.
+// Têm página aqui os textos com o texto completo no site (incluindo os que saíram primeiro num jornal).
 export async function getStaticPaths() {
   const all = await getOpinion();
   return all.filter(o => o.native).map(o => ({ params: { slug: o.id }, props: { item: o } }));
@@ -24,6 +24,12 @@ const { Content } = await render(item.entry);
         <h1>{item.title}</h1>
         {item.summary && <p class="article-sum">{item.summary}</p>}
         <p class="op-by" set:html={'Por ' + joinNames(item.authors, ' e ')} />
+        {item.original && (
+          <p class="article-orig">
+            Publicado originalmente {emOutlet(item.original.outlet)}{item.date && <>, a {fmtDateLong(item.date)}</>}.
+            {item.original.url && <> <a href={item.original.url}>Ler {emOutlet(item.original.outlet)}</a>.</>}
+          </p>
+        )}
       </header>
       <div class="prose">
         <Content />

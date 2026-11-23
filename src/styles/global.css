@@ -263,6 +263,7 @@ h2.sec { font-family: var(--font-display); font-stretch: 112%; font-weight: 750;
 .prose table { border-collapse: collapse; font: 1rem/1.4 var(--font-display); margin: 1.5rem 0; }
 .prose th, .prose td { border-bottom: 1px solid var(--rule); padding: .4rem .8rem .4rem 0; text-align: left; }
 .prose hr { border: 0; border-top: 1px solid var(--rule); margin: 2rem 0; }
+.article-orig { font: 1.0625rem/1.5 var(--font-display); color: var(--muted); margin: .9rem 0 0; }
 .article-foot { max-width: 38rem; margin-top: 2.5rem; padding-top: 1.25rem; border-top: 1px solid var(--rule); font: 1rem/1.5 var(--font-display); color: var(--muted); }
 .op-read a { text-decoration-color: var(--pen); }
 .feed-link { font: 600 1rem/1.4 var(--font-display); margin: .9rem 0 0; }

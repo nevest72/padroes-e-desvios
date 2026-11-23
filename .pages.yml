@@ -37,11 +37,11 @@ content:
       - name: outlet
         label: Publicado em (jornal ou revista)
         type: string
-        description: "Só para textos publicados noutro sítio (ex.: Público). Para um texto do próprio site, deixar vazio."
+        description: "Se o texto saiu primeiro num jornal (ex.: Público). Para um texto escrito só para o site, deixar vazio."
       - name: url
         label: Ligação para o texto no jornal
         type: string
-        description: "Só para textos publicados noutro sítio. Para um texto do próprio site, deixar vazio."
+        description: "Se o texto saiu num jornal. Aparece na página como «Ler no Público»."
       - name: dateText
         label: Data em texto (opcional)
         type: string
@@ -52,7 +52,7 @@ content:
       - name: body
         label: Texto
         type: rich-text
-        description: "Só para textos do próprio site. Para textos publicados noutro sítio, deixar vazio."
+        description: "O texto completo. Se saiu num jornal, colar aqui a vossa versão: o site cria uma página própria com a indicação «Publicado originalmente no …, a …». Se ficar vazio, o título liga diretamente para o jornal."
 
   - name: publicacoes
     label: Publicações

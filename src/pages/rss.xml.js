@@ -1,5 +1,5 @@
 import rss from '@astrojs/rss';
-import { getOpinion } from '../lib/opiniao.js';
+import { getOpinion, emOutlet } from '../lib/opiniao.js';
 
 // Feed dos textos de opinião. É este endereço (/rss.xml) que o serviço de newsletter lê.
 export async function GET(context) {
@@ -14,7 +14,7 @@ export async function GET(context) {
       title: o.title,
       pubDate: o.date,
       link: o.native ? `/opiniao/${o.id}/` : o.href || '/#opiniao',
-      description: o.summary || (o.native ? '' : `Publicado em ${o.outlet}.`),
+      description: o.summary || (o.original ? `Publicado originalmente ${emOutlet(o.outlet)}.` : ''),
       customData: `<dc:creator>${o.authors.join(', ').replace(/&/g, '&amp;').replace(/</g, '&lt;')}</dc:creator>`,
       content: o.native ? (o.entry.rendered?.html || '') : undefined
     }))

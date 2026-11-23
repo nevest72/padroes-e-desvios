@@ -19,7 +19,7 @@ const L = (o: any, k: string) => o[`${k}_${lang}`] || o[`${k}_pt`] || '';
 const opinion = await getOpinion();
 const [feature, ...archive] = opinion;
 const opWhen = (o: any) => o.dateText || fmtDate(o.date, lang, t('nd'));
-const opOutlet = (o: any) => o.native ? 'Padrões e Desvios' : o.outlet;
+const opOutlet = (o: any) => o.original ? o.original.outlet : 'Padrões e Desvios';
 
 // Publicações (ordem: ano, do mais recente; "no prelo" primeiro)
 const pubs = [...pubsData].sort((a, b) => (b.inPress ? 1 : 0) - (a.inPress ? 1 : 0) || b.year - a.year);

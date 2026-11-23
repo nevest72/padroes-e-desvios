@@ -4,8 +4,9 @@
 Corre no GitHub Actions sempre que muda algo em src/content/opiniao/.
 - Um texto é «novo» se não estiver em src/data/newsletter-enviados.json,
   não for rascunho, tiver data e essa data não for mais antiga do que MAX_DIAS.
-- Textos do próprio site: o email leva o texto completo e a ligação para a página.
-- Textos publicados num jornal: o email leva o resumo e a ligação para o jornal.
+- Textos com o texto completo no site: o email leva o texto completo e a ligação para a página
+  (e, se saíram primeiro num jornal, a indicação «Publicado originalmente no …»).
+- Textos que estão só no jornal: o email leva o resumo e a ligação para o jornal.
 - Depois de enviar, o texto é acrescentado ao registo, para nunca ser enviado duas vezes.
 
 Variáveis de ambiente:
@@ -62,8 +63,21 @@ def juntar_nomes(nomes):
     return ", ".join(nomes[:-1]) + " e " + nomes[-1]
 
 
+def em_outlet(o):
+    o = (o or "").strip()
+    if re.match(r"^A\s", o):
+        return "na " + o[2:]
+    if re.match(r"^(Revista|Folha|Gazeta|Visão|Sábado)\b", o, re.I):
+        return "na " + o
+    return "no " + o
+
+
+MESES = ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto",
+         "setembro", "outubro", "novembro", "dezembro"]
+
+
 def montar_email(t):
-    nativo = not t.get("url") and not t.get("outlet")
+    nativo = bool(t["corpo"]) or (not t.get("url") and not t.get("outlet"))
     autores = juntar_nomes(t.get("authors") or ["Tiago Neves", "Gil Nata"])
     resumo = (t.get("summary") or "").strip()
     partes = []
@@ -77,10 +91,14 @@ def montar_email(t):
         if resumo:
             partes.append(f"**{resumo}**")
         partes.append(corpo)
+        if t.get("outlet"):
+            d = data_de(t.get("date"))
+            quando = f", a {d.day} de {MESES[d.month - 1]} de {d.year}" if d else ""
+            partes.append(f"*Publicado originalmente {em_outlet(t['outlet'])}{quando}.*")
         partes.append(f"[Ler no site Padrões e Desvios]({link})")
     else:
         link = t.get("url") or f"{SITE}/#opiniao"
-        partes.append(f"Novo texto de opinião de {autores}, publicado no {t.get('outlet') or 'jornal'}.")
+        partes.append(f"Novo texto de opinião de {autores}, publicado {em_outlet(t.get('outlet') or 'jornal')}.")
         if resumo:
             partes.append(resumo)
         partes.append(f"[Ler o texto]({link})")

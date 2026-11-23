@@ -25,9 +25,11 @@ Endereço previsto: **https://padroesedesvios.eu**
 
 ### Textos de opinião
 
-- **Texto publicado num jornal:** preencher «Publicado em» (ex.: Público) e a ligação. O título no site liga para o jornal e o campo «Texto» fica vazio.
-- **Texto do próprio site:** deixar «Publicado em» e a ligação vazios e escrever o texto no campo «Texto». O texto ganha página própria em `padroesedesvios.eu/opiniao/…`, entra no RSS completo e segue na newsletter.
+- **Texto escrito só para o site:** deixar «Publicado em» e a ligação vazios e escrever o texto no campo «Texto». O texto ganha página própria em `padroesedesvios.eu/opiniao/…`.
+- **Texto publicado num jornal, republicado no site:** preencher «Publicado em» (ex.: Público), a ligação e a data, e colar no campo «Texto» a vossa versão do texto. O site cria uma página própria com a indicação «Publicado originalmente no Público, a 18 de novembro de 2026. Ler no Público.» Assim, quem não tem assinatura do jornal pode ler o texto.
+- **Texto que fica só no jornal:** preencher «Publicado em» e a ligação e deixar «Texto» vazio. O título liga diretamente para o jornal.
 - **Rascunho:** marcar «Rascunho» guarda o texto sem o publicar.
+- **Direitos:** ao republicar, usar a versão dos autores (a que foi enviada ao jornal), não o PDF nem a captura da página do jornal.
 
 ### Publicações
 
