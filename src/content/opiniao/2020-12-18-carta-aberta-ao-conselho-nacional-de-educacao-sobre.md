@@ -1,11 +1,28 @@
 ---
-title: "Carta aberta ao Conselho Nacional de Educação sobre a sua Recomendação relativa ao acesso ao ensino superior"
+title: Carta aberta ao Conselho Nacional de Educação sobre a sua Recomendação
+  relativa ao acesso ao ensino superior
 date: 2020-12-18
 authors:
-  - "Gil Nata"
-  - "Tiago Neves"
-outlet: "Público"
-url: "https://www.publico.pt/2020/12/18/opiniao/opiniao/carta-aberta-conselho-nacional-educacao-recomendacao-relativa-acesso-ensino-superior-1943385"
-summary: ""
+  - Gil Nata
+  - Tiago Neves
+outlet: Público
+url: https://www.publico.pt/2020/12/18/opiniao/opiniao/carta-aberta-conselho-nacional-educacao-recomendacao-relativa-acesso-ensino-superior-1943385
 draft: false
 ---
+O Conselho Nacional de Educação (CNE) emitiu no passado mês de novembro uma Recomendação sobre o acesso ao ensino superior e a articulação com o ensino secundário. Esta recomendação visa atender aos meritórios objetivos de “promoção do sucesso no ensino superior, de justiça social e de inclusão educativa e social”. Na qualidade de investigadores que há uma década se dedicam ao estudo do acesso ao ensino superior, em particular dos efeitos da inﬂação de notas sobre esse processo, sentimos ser nosso dever cívico analisar e comentar a recomendação do CNE, procurando contribuir para o alargamento da reﬂexão em torno deste tema.
+
+Resumidamente, a recomendação do CNE sugere a “redução do peso dos exames nacionais no processo de seleção e seriação dos candidatos”, referindo que “são diversos os elementos que podem ser tidos em conta nos processos de seleção de candidatos, como portfólios, entrevistas, provas com júris, avaliação de currículos, cartas de motivação, pareceres de anteriores professores, etc.”
+
+Presume-se que, ao sugerir estas alternativas ao atual processo, o CNE as considere indutoras de maior justiça social no processo de acesso ao ensino superior. No entanto, nem na recomendação propriamente dita, nem nos documentos técnicos que lhe servem de apoio, são apresentadas evidências concretas de que tais alternativas sejam capazes de induzir maior justiça do que o atual sistema.
+
+Adicionalmente, e contrariando a lógica que se presume subjacente às propostas do CNE, a literatura cientíﬁca, bem como exercícios de reﬂexão crítica sobre os mecanismos alternativos referidos, indicam que estes serão muito provavelmente ampliﬁcadores das desigualdades e injustiças já existentes. Por exemplo, sabemos bem que as notas internas são objeto de inﬂação e que – facto particularmente grave é possível identiﬁcar escolas (desproporcionalmente escolas privadas) que apresentam desvios sistemáticos ao longo dos anos. Assim, qualquer solução que passe por aumentar o peso das notas internas no acesso ﬁca necessariamente mais vulnerável ao poder de compra dos candidatos e suas famílias. Sobre isto, nem uma palavra na recomendação do CNE.
+
+Adicionalmente, não se vê como é que a utilização de entrevistas, portfólios, etc. vá favorecer a justiça social no acesso. O problema subjacente é comum: sempre que o mecanismo proposto seja mais subjetivo, abre-se a porta a que candidatos e respetivas famílias de meios favorecidos possam usar esses mecanismos para garantirem vantagem sobre os restantes. De facto, parece bastante evidente que, beneﬁciando claramente aqueles que possuem maior capital económico e social, tais alternativas intensiﬁquem as desigualdades sociais.
+
+Não é difícil, por exemplo, antever a criação de um mercado para a elaboração de portfólios e cartas de motivação, em paralelo com o mercado de explicações já existente. Ademais, não se vê como é que a introdução de mecanismos mais subjetivos garanta a comparabilidade dos resultados, condição essencial para os utilizar como indicadores na seriação de candidatos.
+
+Grosso modo, o que se discute aqui é a opção entre dois modelos de seleção de candidatos ao ensino superior. Por um lado, um modelo limitado à avaliação de conhecimentos, utilizando essencialmente os exames nacionais. Por outro lado, um modelo mais abrangente, que avalia também atitudes e competências, utilizando, para além dos exames nacionais, as notas internas, entrevistas, portfólios, etc. Embora, em teoria, este segundo modelo pareça mais interessante, não oferece, ao contrário do primeiro, garantias de comparabilidade dos resultados, abrindo claramente espaço ao enviesamento e ao favorecimento sistemático de determinados grupos sociais. Por isso, e apesar de mais limitado, o primeiro modelo aﬁgura-se mais justo do que o segundo.
+
+Finalmente, uma nota apenas sobre um problema identiﬁcado na “Recomendação do CNE”, a saber, a existência de pressão sobre o ensino secundário criada pela ênfase colocada na preparação dos alunos para o acesso ao ensino superior. A solução sugerida pelo CNE para este problema, designadamente o “reforço da responsabilidade das instituições de ensino superior pelo processo de acesso e ingresso no ensino superior”, limita-se, em nosso entender, a deslocar o ponto de pressão para outro sítio. De facto, enquanto houver numerus clausus haverá inevitavelmente pressão no sistema, nos estudantes e das suas famílias.
+
+Uma solução do tipo que o CNE sugere obrigará os estudantes e respetivas famílias a darem resposta a uma nova tarefa para além das que existem atualmente, designadamente a preparação para novos exames e/ou outros elementos de avaliação que as instituições de ensino superior resolvam implementar. Prevê-se ainda a criação de novos mercados (manuais, explicadores, etc.) que venham responder a esta nova necessidade. E, sem surpresas, prevê-se também que serão os estudantes mais favorecidos a tirar melhor partido destas regras, com o correspondente aumento das desigualdades que o CNE, através desta recomendação, pretende mitigar.
