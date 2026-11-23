@@ -18,6 +18,10 @@ body_en: |-
 
   The graph summarises the gap between final school-assigned grades (CIF) and national exam grades (CE). The line at 0 (zero) on the vertical axis represents the average difference between all school-assigned grades and all the corresponding national exam grades. This line is divided into the school years analysed, from 2001/02 to 2011/12. This average gap is the baseline against which the gaps of public and private schools can be assessed.
 
+  ![Gap between school-assigned and national exam grades, relative to the average, by type of school (private without and with a state association contract, non-TEIP and TEIP public) and school year, 2001/02–2011/12](/imagens/apagina-201-grafico-en.png)
+
+  *Note (2026): the original graph could not be recovered; this one was reconstructed from the data published in Nata, Pereira and Neves (2014).*
+
   The graph shows that the largest gap between CIF and CE is found in private schools without an association contract. In these schools, the gap is always above average: almost always more than 0.5 points (on a 0–20 scale), reaching almost 0.9 in 2011/12.
 
   At the opposite end are non-TEIP public schools, whose gaps are always slightly below average. TEIP public schools and private schools with an association contract, for their part, show lines that are always very close to the average, sometimes below (especially TEIP schools) and sometimes above (especially private schools with an association contract).
@@ -31,6 +35,10 @@ Na anterior edição em papel [PÁGINA nº 200, primavera] demonstrámos que o d
 Vamos agora avançar a análise, desagregando os dados por escola pública (TEIP e não-TEIP) e privada (com e sem contrato de associação). Recordamos que para este trabalho foram utilizadas as bases de dados dos resultados nos exames nacionais disponibilizadas pelo Ministério da Educação e Ciência, num total de cerca de 4.500.000 exames.
 
 O gráfico sintetiza o diferencial entre as classificações internas (CIF) e as classificações nos exames nacionais (CE). A linha correspondente ao valor 0 (zero) no eixo das ordenadas representa a média das diferenças entre todas as classificações internas e todas as correspondentes classificações nos exames nacionais. Esta linha encontra-se dividida nos anos letivos relativamente aos quais a análise foi efetuada, de 2001/02 a 2011/12. Este diferencial médio constitui a linha de base contra a qual se podem apreciar os diferenciais das escolas públicas e das privadas.
+
+![Diferencial entre as classificações internas e as dos exames nacionais, relativamente à média, por tipo de escola (privadas sem e com contrato de associação, públicas não-TEIP e TEIP) e ano letivo, 2001/02–2011/12](/imagens/apagina-201-grafico.png)
+
+*Nota (2026): não foi possível recuperar o gráfico original; este foi reconstituído a partir dos dados publicados em Nata, Pereira e Neves (2014).*
 
 O gráfico demonstra que o maior diferencial entre as CIF e as CE se encontra nas escolas privadas sem contrato de associação. Desde logo, nessas escolas, o diferencial é sempre superior à média: quase sempre superior a 0,5 valores e em 2011/12 atinge quase os 0,9. 
 

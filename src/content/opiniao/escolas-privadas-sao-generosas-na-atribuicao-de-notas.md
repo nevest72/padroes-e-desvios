@@ -17,7 +17,9 @@ body_en: |-
 
   Finally, we disaggregated the results by type of school: public and private. The graph summarises the gap between final school-assigned grades (CIF) and national exam grades (CE). The line at 0 (zero) on the vertical axis represents the average difference between all school-assigned grades and the corresponding national exam grades. This line is divided into 20 points, from 0 (zero) to 19, corresponding to the marks obtained in the national exams (on a 0–20 scale). Point 0 (zero) groups national exam marks between 0 and 0.9, point 1 marks between 1 and 1.9, and so on up to point 19, which groups marks between 19 and 20. This average gap is thus the baseline from which the gaps of public and private schools can be assessed.
 
-  ![](/imagens/2026-11-18-fig3.png)
+  ![Gap between school-assigned and national exam grades, relative to the average for all schools, by national exam grade, for private and public schools (2001/02–2011/12)](/imagens/apagina-200-grafico-en.png)
+
+  *Note (2026): the original graph could not be recovered; this one was reconstructed from the data published in Nata, Pereira and Neves (2014).*
 
   The graph clearly shows that the gap between school-assigned grades and national exam marks is larger in private schools than in public ones. In private schools the gap is always above average; in public schools, always below. It should be noted that, in principle, the gap for public schools would always be relatively close to the average, because there are about five times as many public schools as private ones: in other words, public schools carry more weight in the average.
 
@@ -31,7 +33,9 @@ No âmbito de um projeto de investigação mais alargado sobre os rankings escol
 
 Por fim, desagregámos os dados obtidos por tipo de escola: pública e privada. O gráfico sintetiza o diferencial entre as classificações internas (CIF) e as classificações nos exames nacionais (CE). A linha correspondente ao valor 0 (zero) no eixo das ordenadas representa a média das diferenças entre todas as classificações internas e as correspondentes classificações nos exames nacionais. Esta linha encontra-se dividida em 20 pontos, do 0 (zero) ao 19, que correspondem às classificações obtidas nos exames nacionais. O ponto 0 (zero) agrega as classificações nos exames nacionais entre 0 (zero) e 0,9 valores, o ponto 1 as classificações entre 1 e 1,9 e assim sucessivamente até ao ponto 19, que agrega as classificações entre 19 e 20 valores. Este diferencial médio constitui, assim, a linha de base a partir da qual se podem apreciar os diferenciais das escolas públicas e das escolas privadas.
 
-![](/imagens/2026-11-18-fig3.png)
+![Diferencial entre as classificações internas e as dos exames nacionais, relativamente à média de todas as escolas, por classificação no exame, nas escolas privadas e públicas (2001/02–2011/12)](/imagens/apagina-200-grafico.png)
+
+*Nota (2026): não foi possível recuperar o gráfico original; este foi reconstituído a partir dos dados publicados em Nata, Pereira e Neves (2014).*
 
 A análise do gráfico demonstra claramente que o diferencial entre as classificações internas e as classificações obtidas nos exames nacionais é maior nas escolas privadas do que nas públicas. Desde logo, nas escolas privadas o diferencial é sempre superior à média; nas públicas, sempre inferior. Deve aqui assinalar-se que, em princípio, o diferencial das escolas públicas estaria sempre relativamente próximo da média, porque há cerca de cinco vezes mais escolas públicas do que privadas: ou seja, as escolas públicas têm um peso maior na formação da média.
 
