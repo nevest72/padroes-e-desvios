@@ -140,13 +140,22 @@ content:
           - { value: int, label: Entrevista }
           - { value: tv, label: Televisão }
           - { value: col, label: Crónica }
+          - { value: parl, label: Parlamento }
       - name: title
         label: Título
         type: string
         required: true
-      - name: url
-        label: Ligação
+      - name: title_en
+        label: Título em inglês (opcional)
         type: string
+        description: "Só aparece na versão inglesa. Se ficar vazio, usa-se o título em português."
+      - name: url
+        label: Ligação (vídeo ou notícia)
+        type: string
+      - name: slides
+        label: Apresentação (opcional)
+        type: string
+        description: "Endereço do PDF ou dos diapositivos. Aparece uma ligação «Apresentação (PDF)» por baixo do título."
 
   - name: projetos
     label: Projetos

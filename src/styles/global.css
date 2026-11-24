@@ -207,6 +207,9 @@ h2.sec { font-family: var(--font-display); font-stretch: 112%; font-weight: 750;
 .row-main h3 a:hover { text-decoration-color: var(--pen); }
 .row-line { margin: 0; font: 500 1rem/1.45 var(--font-display); color: var(--muted); }
 .row-line .me { color: var(--ink); font-weight: 600; }
+.row-links { display: flex; flex-wrap: wrap; gap: .25rem 1.25rem; }
+.row-links a { color: var(--ink); text-decoration-color: color-mix(in srgb, var(--pen) 45%, transparent); }
+.row-links a:hover { text-decoration-color: var(--pen); }
 .row-tag { margin: 0; justify-self: end; }
 .pill { display: inline-block; font: 600 .875rem/1.5 var(--font-display); border-radius: 999px; padding: .05rem .6rem; border: 1px solid var(--control); color: var(--ink); white-space: nowrap; }
 .pill.done { background: var(--ink); color: var(--paper); border-color: var(--ink); }

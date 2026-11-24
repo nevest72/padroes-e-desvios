@@ -38,6 +38,7 @@ const refHtml = (p: any) => {
 };
 
 // Media
+const mTitle = (m) => (lang === 'en' && m.title_en ? m.title_en : m.title);
 const media = [...mediaData].sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0));
 const MEDIA_PAGE = 12;
 
@@ -126,7 +127,8 @@ const clientStrings = {
             <p class="row-when">{fmtDate(m.date, lang, t('nd'))}</p>
             <div class="row-main">
               <p class="row-outlet">{m.outlet}</p>
-              <h3>{m.url ? <a href={m.url}>{m.title}</a> : m.title}</h3>
+              <h3>{m.url ? <a href={m.url}>{mTitle(m)}</a> : mTitle(m)}</h3>
+              {m.slides && <p class="row-line row-links">{m.url && <a href={m.url}>{t('media.video')}</a>}<a href={m.slides}>{t('media.slides')}</a></p>}
             </div>
             <p class="row-tag"><span class="pill">{t('media.k.' + m.kind)}</span></p>
           </article>
